@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更新</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-family: "SimSun", serif;
+            font-size: 48px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input[type="text"] {
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>更新</h1>
+    <form action="/update_book" method="post">
+        <label for="book_id">编号：</label>
+        <input type="text" id="book_id" name="book_id">
+        <label for="type_id">分类编号：</label>
+        <input type="text" id="type_id" name="type_id">
+        <label for="book_name">书名：</label>
+        <input type="text" id="book_name" name="book_name">
+        <label for="writer">作者：</label>
+        <input type="text" id="writer" name="writer">
+        <label for="publication">出版社：</label>
+        <input type="text" id="publication" name="publication">
+        <label for="publication_date">出版日期：</label>
+        <input type="text" id="publication_date" name="publication_date">
+        <label for="language">语言：</label>
+        <input type="text" id="language" name="language">
+        <label for="single_book_state">单册状态：</label>
+        <input type="text" id="single_book_state" name="single_book_state">
+        <label for="total">总数：</label>
+        <input type="text" id="total" name="total">
+        <label for="shelf_code">位置：</label>
+        <input type="text" id="shelf_code" name="shelf_code">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

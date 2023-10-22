@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        body {
+            background-image: url("/image/3.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: #fff;
+            margin-top: 100px;
+            text-align: center;
+            text-shadow: 2px 2px #000;
+        }
+        form {
+            margin: 50px auto;
+            padding: 20px;
+            width: 350px;
+            background: rgba(65, 55, 55, 0.79);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        input[type="text"],
+        input[type="password"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 20px;
+            background: #f2f2f2;
+            font-size: 1.2rem;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background: #e6e6e6;
+        }
+        input[type="radio"] {
+            margin: 0 10px;
+        }
+        input[type="submit"],
+        input[type="button"],
+        input[type="reset"] {
+            display: inline-block; /* Add this */
+            margin: 20px 11px; /* Modify this */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #4CAF50;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover {
+            background: #3e8e41;
+        }
+        p.text{
+            color: #f6f0f1;
+        }
+        p.error {
+            color: #DC143C;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+<body>
+<h1>校园智慧图书管理系统</h1>
+<form action="/login" method="post">
+    <p class="text">
+        <label for="user_id">账号：</label>
+        <input type="text" name="user_id" id="user_id" required>
+    </p>
+    <p class="text">
+        <label for="password">密码：</label>
+        <input type="password" name="password" id="password" required>
+    </p>
+    <p class="text">
+        <label>角色：</label>
+        <input type="radio" name="role" value="s" id="s" required>
+        <label for="s">学生</label>
+        <input type="radio" name="role" value="t" id="t" required>
+        <label for="t">管理员</label>
+    </p>
+    <p>
+        <input type="submit" value="登录">
+        <input type="reset" value="重置">
+        <input type="button" value="注册" onclick='location.href="/path_enroll"'>
+    </p>
+    <p class="error" th:text="*{msg}"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆管理员</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-family: "SimSun", serif;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        input[type='text'] {
+            width: 300px;
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        input[type='submit'] {
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button {
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        td:last-child {
+            text-align: center;
+        }
+        td:last-child a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #f44336;
+        }
+        td:last-child a:hover {
+            background-color: #d32f2f;
+        }
+        input[type='button'] {
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type='button']:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>图书馆管理员</h1>
+    <form action="/search_book_by_name" method="post">
+        <input type="text" name="book_name" placeholder="按书名查找...">
+        <input type="submit" value="搜索">
+    </form>
+    <form action="/search_book_by_type" method="post">
+        <input type="text" name="type_name" placeholder="按类型查找...">
+        <input type="submit" value="搜索">
+    </form>
+    <button onclick='location.href="/path_insert_book"'>添加书籍</button>
+    <button onclick='location.href="/user"'>用户管理</button>
+    <button onclick="location.href='/select_type'">分类管理</button>
+    <button onclick="location.href='/select_ticket'">罚款管理</button>
+    <button onclick="location.href='/BorrowRecord'">借阅管理</button>
+    <table>
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>书名</th>
+                <th>出版社</th>
+                <th>作者</th>
+                <th>出版日期</th>
+                <th>语言</th>
+                <th>单册状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="book : ${session.bookList}">
+                <td th:text="${book.book_id}"></td>
+                <td th:text="${book.book_name}"></td>
+                <td th:text="${book.publication}"></td>
+                <td th:text="${book.writer}"></td>
+                <td th:text="${book.publication_date}"></td>
+                <td th:text="${book.language}"></td>
+                <td th:text="${book.single_book_state}"></td>
+                <td>
+                    <input type="button" value="更新" onclick='location.href="/path_update_book"' >
+                    <a th:href="@{'/delete_book?bid='+${book.getBook_id()}}">删除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>罚款记录</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-family: "SimSun", serif;
+      font-size: 36px;
+      margin-top: 50px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      margin-bottom: 50px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<form action="" method="post" >
+  <h1>罚款</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>编号</th>
+      <th>用户编号</th>
+      <th>书籍条码</th>
+      <th>类型</th>
+      <th>描述</th>
+      <th>金额</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ticket : ${session.TicketList}">
+      <td th:text="${ticket.ticket_id}">1</td>
+      <td th:text="${ticket.user_id}">2</td>
+      <td th:text="${ticket.book_code}">3</td>
+      <td th:text="${ticket.ticket_type}">4</td>
+      <td th:text="${ticket.ticket_description}">5</td>
+      <td th:text="${ticket.ticket_money}">5</td>
+    </tr>
+    </tbody>
+  </table>
+  <p style="text-align: center;">
+    <a href="/book_management">返回</a>
+  </p>
+</form>
+</body>
+</html>
