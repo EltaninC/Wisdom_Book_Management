@@ -1,9 +1,10 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.CascadeType;
 import com.example.wisdom_book_management.domain.Type;
 import com.example.wisdom_book_management.mapper.TypeMapper;
+import com.example.wisdom_book_management.service.TypeService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NU
 import static com.example.wisdom_book_management.component.ResultEnum.UNKNOWN_ERROR;
 
 @Service
-public class TypeServiceImpl implements TypeService{
+public class TypeServiceImpl implements TypeService {
     @Autowired
     TypeMapper typeMapper;
 

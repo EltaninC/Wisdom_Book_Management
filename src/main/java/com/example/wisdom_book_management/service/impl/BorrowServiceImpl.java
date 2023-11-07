@@ -1,10 +1,11 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.Back;
 import com.example.wisdom_book_management.domain.Borrow;
 import com.example.wisdom_book_management.domain.User;
 import com.example.wisdom_book_management.mapper.*;
+import com.example.wisdom_book_management.service.BorrowService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ import static com.example.wisdom_book_management.component.ResultEnum.*;
 
 
 @Service
-public class BorrowServiceImpl implements BorrowService{
+public class BorrowServiceImpl implements BorrowService {
     @Autowired
     BorrowMapper borrowMapper;
     @Autowired

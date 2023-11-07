@@ -1,21 +1,20 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.Book;
 import com.example.wisdom_book_management.mapper.ABookMapper;
 import com.example.wisdom_book_management.mapper.BookMapper;
+import com.example.wisdom_book_management.service.BookService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NULL;
 import static com.example.wisdom_book_management.component.ResultEnum.UNKNOWN_ERROR;
 
 @Service
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
     @Autowired
     BookMapper bookMapper;
 

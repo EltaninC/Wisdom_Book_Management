@@ -2,7 +2,7 @@ package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.User;
-import com.example.wisdom_book_management.service.UserServiceImpl;
+import com.example.wisdom_book_management.service.impl.UserServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

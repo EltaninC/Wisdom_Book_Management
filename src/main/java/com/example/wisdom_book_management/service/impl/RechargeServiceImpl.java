@@ -1,9 +1,10 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.Recharge;
 import com.example.wisdom_book_management.mapper.RechargeMapper;
 import com.example.wisdom_book_management.mapper.UserMapper;
+import com.example.wisdom_book_management.service.RechargeService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 import static com.example.wisdom_book_management.component.ResultEnum.UNKNOWN_ERROR;
 
 @Service
-public class RechargeServiceImpl implements RechargeService{
+public class RechargeServiceImpl implements RechargeService {
     @Autowired
     RechargeMapper rechargeMapper;
 

@@ -1,4 +1,4 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.domain.Ticket;
 import com.example.wisdom_book_management.mapper.TicketMapper;

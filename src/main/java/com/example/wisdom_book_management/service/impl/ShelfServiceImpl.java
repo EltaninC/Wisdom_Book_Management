@@ -1,8 +1,9 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.Shelf;
 import com.example.wisdom_book_management.mapper.ShelfMapper;
+import com.example.wisdom_book_management.service.ShelfService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NU
 import static com.example.wisdom_book_management.component.ResultEnum.UNKNOWN_ERROR;
 
 @Service
-public class ShelfServiceImpl implements ShelfService{
+public class ShelfServiceImpl implements ShelfService {
     @Autowired
     ShelfMapper shelfMapper;
     @Override

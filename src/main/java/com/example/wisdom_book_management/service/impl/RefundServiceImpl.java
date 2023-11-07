@@ -1,8 +1,9 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.domain.Refund;
 import com.example.wisdom_book_management.mapper.RefundMapper;
+import com.example.wisdom_book_management.service.RefundService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import static com.example.wisdom_book_management.component.ResultEnum.UNKNOWN_ER
 import static com.example.wisdom_book_management.component.ResultEnum.UNLAWFUL_ACT;
 
 @Service
-public class RefundServiceImpl implements RefundService{
+public class RefundServiceImpl implements RefundService {
     @Autowired
     RefundMapper refundMapper;
 

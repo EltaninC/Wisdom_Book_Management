@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.domain.Ticket;
-import com.example.wisdom_book_management.service.TicketService;
+import com.example.wisdom_book_management.service.impl.TicketService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

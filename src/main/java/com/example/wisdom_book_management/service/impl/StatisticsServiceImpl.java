@@ -1,10 +1,11 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.domain.Back;
 import com.example.wisdom_book_management.domain.Book;
 import com.example.wisdom_book_management.domain.Statistics;
 import com.example.wisdom_book_management.mapper.BookMapper;
 import com.example.wisdom_book_management.mapper.StatisticsMapper;
+import com.example.wisdom_book_management.service.StatisticsService;
 import com.example.wisdom_book_management.utils.MahoutUtils;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
@@ -16,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Service
-public class StatisticsServiceImpl implements StatisticsService{
+public class StatisticsServiceImpl implements StatisticsService {
     @Autowired
     StatisticsMapper statisticsMapper;
 

@@ -1,8 +1,9 @@
-package com.example.wisdom_book_management.service;
+package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
 import com.example.wisdom_book_management.mapper.AdminMapper;
 import com.example.wisdom_book_management.mapper.UserMapper;
+import com.example.wisdom_book_management.service.LoginService;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import com.example.wisdom_book_management.utils.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import static com.example.wisdom_book_management.component.ResultEnum.USER_IS_EX
 import static com.example.wisdom_book_management.component.ResultEnum.USER_NOT_EXIST;
 
 @Service
-public class LoginServiceImpl implements LoginService{
+public class LoginServiceImpl implements LoginService {
     @Autowired
     UserMapper userMapper;
     @Autowired
