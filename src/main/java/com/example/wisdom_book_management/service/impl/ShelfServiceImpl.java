@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Shelf;
+import com.example.wisdom_book_management.domain.po.Shelf;
 import com.example.wisdom_book_management.mapper.ShelfMapper;
 import com.example.wisdom_book_management.service.ShelfService;
 import com.example.wisdom_book_management.utils.ResultUtils;

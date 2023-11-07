@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.Recharge;
+import com.example.wisdom_book_management.domain.po.Recharge;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

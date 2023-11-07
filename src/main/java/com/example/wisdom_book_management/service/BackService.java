@@ -1,9 +1,7 @@
 package com.example.wisdom_book_management.service;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Back;
-
-import java.util.List;
+import com.example.wisdom_book_management.domain.po.Back;
 
 public interface BackService {
     public Result<Back> GetBackByUid(int uid);

@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Back;
+import com.example.wisdom_book_management.domain.po.Back;
 import com.example.wisdom_book_management.service.BackService;
 import com.example.wisdom_book_management.utils.TokenUtil;
 import jakarta.annotation.Resource;
@@ -9,8 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/back")

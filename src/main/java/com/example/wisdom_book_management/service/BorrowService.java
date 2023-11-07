@@ -1,10 +1,7 @@
 package com.example.wisdom_book_management.service;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Borrow;
-
-import java.time.LocalDate;
-import java.util.List;
+import com.example.wisdom_book_management.domain.po.Borrow;
 
 public interface BorrowService {
 

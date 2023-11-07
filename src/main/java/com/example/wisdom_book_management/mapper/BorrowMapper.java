@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.Borrow;
+import com.example.wisdom_book_management.domain.po.Borrow;
 import org.apache.ibatis.annotations.*;
 
 import java.time.LocalDate;

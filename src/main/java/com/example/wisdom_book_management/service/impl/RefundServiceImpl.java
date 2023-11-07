@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Refund;
+import com.example.wisdom_book_management.domain.po.Refund;
 import com.example.wisdom_book_management.mapper.RefundMapper;
 import com.example.wisdom_book_management.service.RefundService;
 import com.example.wisdom_book_management.utils.ResultUtils;

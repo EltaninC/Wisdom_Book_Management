@@ -1,8 +1,8 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.CascadeType;
-import com.example.wisdom_book_management.domain.Type;
+import com.example.wisdom_book_management.domain.dto.CascadeType;
+import com.example.wisdom_book_management.domain.po.Type;
 import com.example.wisdom_book_management.mapper.TypeMapper;
 import com.example.wisdom_book_management.service.TypeService;
 import com.example.wisdom_book_management.utils.ResultUtils;

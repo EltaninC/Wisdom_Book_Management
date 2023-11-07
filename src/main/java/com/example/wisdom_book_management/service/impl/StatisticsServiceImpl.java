@@ -1,8 +1,7 @@
 package com.example.wisdom_book_management.service.impl;
 
-import com.example.wisdom_book_management.domain.Back;
-import com.example.wisdom_book_management.domain.Book;
-import com.example.wisdom_book_management.domain.Statistics;
+import com.example.wisdom_book_management.domain.po.Book;
+import com.example.wisdom_book_management.domain.dto.Statistics;
 import com.example.wisdom_book_management.mapper.BookMapper;
 import com.example.wisdom_book_management.mapper.StatisticsMapper;
 import com.example.wisdom_book_management.service.StatisticsService;

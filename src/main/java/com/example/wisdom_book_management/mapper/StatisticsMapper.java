@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.Statistics;
-import com.example.wisdom_book_management.domain.Mahout;
+import com.example.wisdom_book_management.domain.dto.Statistics;
+import com.example.wisdom_book_management.domain.dto.Mahout;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

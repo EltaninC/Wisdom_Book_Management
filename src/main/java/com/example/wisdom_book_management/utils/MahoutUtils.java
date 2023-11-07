@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.utils;
 
-import com.example.wisdom_book_management.domain.Mahout;
+import com.example.wisdom_book_management.domain.dto.Mahout;
 import com.example.wisdom_book_management.mapper.StatisticsMapper;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;

@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Shelf;
+import com.example.wisdom_book_management.domain.po.Shelf;
 import com.example.wisdom_book_management.service.ShelfService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
