@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.User;
+import com.example.wisdom_book_management.domain.po.User;
 import org.apache.ibatis.annotations.*;
 
 import java.math.BigDecimal;

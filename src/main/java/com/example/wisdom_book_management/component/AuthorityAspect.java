@@ -27,8 +27,7 @@ public class AuthorityAspect {
             "execution (* com.example.wisdom_book_management.controller.TypeController.DeleteType(..)) ||" +
             "execution (* com.example.wisdom_book_management.controller.BorrowController.GetBorrow(..)) ||" +
             "execution (* com.example.wisdom_book_management.controller.UserController.*User(..)) ||" +
-            "execution (* com.example.wisdom_book_management.controller.RechargeController.*A(..)) ||" +
-            "execution (* com.example.wisdom_book_management.controller.RefundController.*A(..))")
+            "execution (* com.example.wisdom_book_management.controller.PropertyController.*A(..))")
     public void pointcut() {
 
     }

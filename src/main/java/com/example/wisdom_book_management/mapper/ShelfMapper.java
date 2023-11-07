@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.Shelf;
+import com.example.wisdom_book_management.domain.po.Shelf;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

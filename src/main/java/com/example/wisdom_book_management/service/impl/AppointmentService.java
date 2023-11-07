@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.service.impl;
 
-import com.example.wisdom_book_management.domain.Appointment;
+import com.example.wisdom_book_management.domain.po.Appointment;
 import com.example.wisdom_book_management.mapper.AppointmentMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,7 @@
 package com.example.wisdom_book_management.service;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Refund;
-
-import java.util.List;
+import com.example.wisdom_book_management.domain.po.Refund;
 
 public interface RefundService {
 

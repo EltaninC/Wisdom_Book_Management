@@ -1,4 +1,4 @@
-package com.example.wisdom_book_management.domain;
+package com.example.wisdom_book_management.domain.po;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Recharge;
+import com.example.wisdom_book_management.domain.po.Recharge;
 import com.example.wisdom_book_management.mapper.RechargeMapper;
 import com.example.wisdom_book_management.mapper.UserMapper;
 import com.example.wisdom_book_management.service.RechargeService;

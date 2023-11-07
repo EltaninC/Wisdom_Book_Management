@@ -1,4 +1,4 @@
-package com.example.wisdom_book_management.domain;
+package com.example.wisdom_book_management.domain.dto;
 
 import lombok.Data;
 

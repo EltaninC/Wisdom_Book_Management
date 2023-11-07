@@ -1,8 +1,8 @@
 package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.CascadeType;
-import com.example.wisdom_book_management.domain.Type;
+import com.example.wisdom_book_management.domain.dto.CascadeType;
+import com.example.wisdom_book_management.domain.po.Type;
 import com.example.wisdom_book_management.service.impl.TypeServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

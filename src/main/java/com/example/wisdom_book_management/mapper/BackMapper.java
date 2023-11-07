@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.mapper;
 
-import com.example.wisdom_book_management.domain.Back;
+import com.example.wisdom_book_management.domain.po.Back;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

@@ -1,9 +1,9 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Back;
-import com.example.wisdom_book_management.domain.Borrow;
-import com.example.wisdom_book_management.domain.User;
+import com.example.wisdom_book_management.domain.po.Back;
+import com.example.wisdom_book_management.domain.po.Borrow;
+import com.example.wisdom_book_management.domain.po.User;
 import com.example.wisdom_book_management.mapper.*;
 import com.example.wisdom_book_management.service.BorrowService;
 import com.example.wisdom_book_management.utils.ResultUtils;
@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 import static com.example.wisdom_book_management.component.ResultEnum.*;
 

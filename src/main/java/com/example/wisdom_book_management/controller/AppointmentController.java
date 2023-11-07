@@ -1,6 +1,6 @@
 package com.example.wisdom_book_management.controller;
 
-import com.example.wisdom_book_management.domain.Appointment;
+import com.example.wisdom_book_management.domain.po.Appointment;
 import com.example.wisdom_book_management.service.impl.AppointmentService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;

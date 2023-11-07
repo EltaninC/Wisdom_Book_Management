@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.service;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Shelf;
+import com.example.wisdom_book_management.domain.po.Shelf;
 
 public interface ShelfService {
     //查询货架信息

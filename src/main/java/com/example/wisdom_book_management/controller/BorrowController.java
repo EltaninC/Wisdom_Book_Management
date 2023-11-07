@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.controller;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Borrow;
+import com.example.wisdom_book_management.domain.po.Borrow;
 import com.example.wisdom_book_management.service.impl.BorrowServiceImpl;
 import com.example.wisdom_book_management.utils.ResultUtils;
 import com.example.wisdom_book_management.utils.TokenUtil;

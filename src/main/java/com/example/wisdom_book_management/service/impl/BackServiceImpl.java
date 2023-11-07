@@ -1,7 +1,7 @@
 package com.example.wisdom_book_management.service.impl;
 
 import com.example.wisdom_book_management.component.Result;
-import com.example.wisdom_book_management.domain.Back;
+import com.example.wisdom_book_management.domain.po.Back;
 import com.example.wisdom_book_management.mapper.BackMapper;
 import com.example.wisdom_book_management.service.BackService;
 import com.example.wisdom_book_management.utils.ResultUtils;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NULL;
 

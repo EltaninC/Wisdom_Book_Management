@@ -1,10 +1,9 @@
 package com.example.wisdom_book_management.controller;
 
-import com.example.wisdom_book_management.domain.Book;
-import com.example.wisdom_book_management.domain.Statistics;
+import com.example.wisdom_book_management.domain.po.Book;
+import com.example.wisdom_book_management.domain.dto.Statistics;
 import com.example.wisdom_book_management.service.StatisticsService;
 import org.apache.mahout.cf.taste.common.TasteException;
-import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
