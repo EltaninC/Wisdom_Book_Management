@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import static com.example.wisdom_book_management.component.ResultEnum.*;
 
@@ -32,8 +33,11 @@ public class BorrowServiceImpl implements BorrowService {
 
     //获取用户获取借阅记录
     public Result<Borrow> GetBorrowByUid(Object uid){
-        if(!borrowMapper.GetBorrowByUid(uid).isEmpty()){
-            return ResultUtils.success(borrowMapper.GetBorrowByUid(uid));
+        //1.获取借阅记录
+        List<Borrow> borrows = borrowMapper.GetBorrowByUid(uid);
+        //2.返回结果
+        if(!borrows.isEmpty()){
+            return ResultUtils.success(borrows);
         }
         else{
             return ResultUtils.Err(DATA_IS_NULL.getCode(), DATA_IS_NULL.getMsg());

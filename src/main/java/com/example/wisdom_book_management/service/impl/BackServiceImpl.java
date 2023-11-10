@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NULL;
 
@@ -18,8 +19,11 @@ public class BackServiceImpl implements BackService {
     BackMapper backMapper;
 
     public Result<Back> GetBackByUid(int uid){
-        if(!backMapper.GetBackByUid(uid).isEmpty()){
-            return ResultUtils.success(backMapper.GetBackByUid(uid));
+        //1.获取数据
+        List<Back> backs = backMapper.GetBackByUid(uid);
+        //2.返回结果
+        if(!backs.isEmpty()){
+            return ResultUtils.success(backs);
         }
         else{
             return ResultUtils.Err(DATA_IS_NULL.getCode(), DATA_IS_NULL.getMsg());

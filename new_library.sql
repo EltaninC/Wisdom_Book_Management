@@ -269,3 +269,18 @@ CREATE TABLE `refund` (
 
 INSERT INTO `refund` values (1,1,1,'2023-09-18 15:48:07',100.00);
 
+--
+-- 表的结构 'appointment'
+--
+
+CREATE TABLE `appointment` (
+      `appointment_id` int(10) NOT NULL AUTO_INCREMENT,
+      `book_id` int(10) NOT NULL,
+      `user_id` int(10) NOT NULL,
+      `start_date` datetime NOT NULL ,
+      `end_date` datetime NOT NULL ,
+      `state` char(10) NOT NULL ,
+      PRIMARY KEY (appointment_id)
+)ENGINE = InnoDb DEFAULT CHAR SET = utf8;
+
+INSERT INTO `appointment` values (1,1,1,'2023-09-18 15:48:07','2023-09-20 15:48:07','待取书');

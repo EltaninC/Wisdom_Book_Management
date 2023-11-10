@@ -1,5 +1,6 @@
 package com.example.wisdom_book_management.domain.po;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @Component
 @Data
 public class Back {
+    @TableId("backId")
     private int back_id;
     private int user_id;
     private String book_code;

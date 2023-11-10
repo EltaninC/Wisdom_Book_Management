@@ -1,5 +1,10 @@
 package com.example.wisdom_book_management;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.wisdom_book_management.domain.po.Appointment;
+import com.example.wisdom_book_management.mapper.AppointmentMapper;
+import com.example.wisdom_book_management.service.AppointmentService;
+import com.example.wisdom_book_management.service.impl.AppointmentServiceImpl;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.GenericDataModel;
@@ -35,10 +40,30 @@ class WisdomBookManagementApplicationTests {
 
     @Autowired
     MahoutMapper mahoutMapper;
+    @Autowired
+    AppointmentMapper appointmentMapper;
+    @Autowired
+    AppointmentService appointmentService;
 
     @Test
     void contextLoads() {
+
     }
+
+    @Test
+    void Mybatis_plus_test(){
+        //报错，使用spring自动创建，来管理
+        //AppointmentService appointmentService = new AppointmentServiceImpl();
+        System.out.println(appointmentService.getById(1));
+        QueryWrapper<Appointment> wrapper = new QueryWrapper<Appointment>()
+                .select("appointment_id", "start_date", "end_date")
+                .like("username", "o")
+                .ge("balance", 1000);
+        System.out.println(appointmentMapper.selectList(null));
+
+    }
+
+
 
     @Test
     void Mahout(){

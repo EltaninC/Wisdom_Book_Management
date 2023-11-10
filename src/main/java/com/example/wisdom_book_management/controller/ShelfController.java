@@ -30,7 +30,7 @@ public class ShelfController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public Result updateShelf(String shelf_code){
+    public Result deleteShelf(String shelf_code){
         return shelfService.deleteShelf(shelf_code);
     }
 }

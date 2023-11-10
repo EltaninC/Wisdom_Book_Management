@@ -9,3 +9,8 @@
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #mvc:
 #  static-path-pattern: /static/**
+
+#取消下划线转驼峰，实体字段和数据库字段已经映射了
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false # 数据库下划线自动转驼峰标示关闭
