@@ -8,8 +8,11 @@ import com.example.wisdom_book_management.utils.TokenUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,22 +20,15 @@ import static com.example.wisdom_book_management.component.ResultEnum.DATA_IS_NU
 
 @RestController
 public class AppointmentController {
-
     @Autowired
     AppointmentService appointmentService;
+
     //图书预约
-    //TODO
-//    @RequestMapping("/make_appointment")
-//    public String InsertAppointment(HttpServletRequest request){
-//        Appointment appointment = new Appointment();
-//        appointment.setBook_id(Integer.parseInt(request.getParameter("book_id")));
-//        appointment.setUser_id((Integer) request.getSession().getAttribute("Uid"));
-//        LocalDate date = LocalDate.now();
-//        appointment.setAppointment_date(date.plusDays(1));
-//        appointmentService.InsertAppointment(appointment);
-//        return "book";
-//    }
-//
+    @PostMapping("/booking")
+    public Result InsertAppointment(@RequestBody Appointment appointment){
+        return appointmentService.Booking(appointment);
+    }
+
     //通过用户id查询预约记录
     @GetMapping ("/appointment")
     public Result SelectAppointmentByUserId(HttpServletRequest request){

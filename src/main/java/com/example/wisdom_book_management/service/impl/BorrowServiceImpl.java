@@ -84,26 +84,27 @@ public class BorrowServiceImpl implements BorrowService {
     //还书
     @Transactional
     public void ReturnBook(int id){
+        //1.获取借阅信息
         Borrow borrow = borrowMapper.GetBorrowById(id);
+        //2.新建归还信息
         Back back = new Back();
         back.setBook_code(borrow.getBook_code());
         back.setUser_id(borrow.getUser_id());
         back.setBorrow_date(borrow.getBorrow_date());
         back.setReturn_date(LocalDateTime.now());
-        //删除借阅记录
+        //3.删除借阅记录
         borrowMapper.DeleteBorrow(id);
-        //新增归还记录
+        //4.插入数据库
         backMapper.InsertBack(back);
-        //书总数加一
+        //5.书总数加一
         bookMapper.ReturnBook(aBookMapper.GetBookId(back.getBook_code()));
     }
 
     //续借
     public Result Renew(int borrow_id){
-        System.out.println(borrowMapper.isRenew(borrow_id));
-        System.out.println(borrowMapper.isRenew(borrow_id)!=1);
+        //1.判断是否拥有续借权限
         if(borrowMapper.isRenew(borrow_id)!=1){
-            System.out.println(borrow_id);
+            //2.更新借阅记录信息
             borrowMapper.Renew(borrow_id);
             return ResultUtils.success();
         }

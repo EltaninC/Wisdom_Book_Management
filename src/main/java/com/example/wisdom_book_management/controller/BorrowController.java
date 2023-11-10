@@ -59,9 +59,7 @@ public class BorrowController {
 
     //续借
     @RequestMapping(value = "/renew", method = RequestMethod.POST)
-    public Result Renew(Integer borrow_id, HttpServletRequest httpServletRequest){
-        System.out.println(httpServletRequest.getParameter("borrow_id"));
-        System.out.println(borrow_id);
+    public Result Renew(Integer borrow_id){
         return borrowService.Renew(borrow_id);
     }
 
